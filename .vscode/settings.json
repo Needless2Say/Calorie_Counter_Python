@@ -1,7 +1,0 @@
-{
-    "files.associations": {
-        "iosfwd": "cpp"
-    },
-    "python.envFile": "${workspaceFolder}\\.databricks\\.databricks.env",
-    "databricks.python.envFile": "${workspaceFolder}/.env"
-}

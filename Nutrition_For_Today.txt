@@ -1,17 +1,17 @@
-Calories: 2833.0 calories
-Total Fat: 103.8 grams
-Saturated Fat: 34.94 grams
-Trans Fat: 0.71 grams
-Polyunsaturated Fat: 6.58 grams
-Monounsaturated Fat: 11.18 grams
-Cholesterol: 839.4 milligrams
-Sodium: 1803.23 milligrams
-Potassium: 1905.86 milligrams
-Total Carbohydrates: 313.04 grams
-Dietary Fiber: 28.39 grams
+Calories: 1979.56 calories
+Total Fat: 66.22 grams
+Saturated Fat: 17.99 grams
+Trans Fat: 0.0 grams
+Polyunsaturated Fat: 2.54 grams
+Monounsaturated Fat: 3.4 grams
+Cholesterol: 40.0 milligrams
+Sodium: 866.22 milligrams
+Potassium: 399.86 milligrams
+Total Carbohydrates: 268.83 grams
+Dietary Fiber: 28.53 grams
 Soluble Fiber: 4.0 grams
 Dietary Sugars: 0.0 grams
-Total Sugars: 139.74 grams
-Added Sugars: 49.51 grams
+Total Sugars: 118.01 grams
+Added Sugars: 37.18 grams
 Erythritol: 0.0 grams
-Protein: 170.44 grams
+Protein: 87.5 grams

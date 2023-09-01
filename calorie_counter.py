@@ -1,106 +1,87 @@
-from collections import defaultdict
+# import libraries
+import os
+import json
 
-'''Calorie Counter Class'''
+#==================================================================================================================================
+# Calorie Counter Class
+
 class CalorieCounter:
-    # All Nutrition Fact Labels
-
-    all_food_content =  ["Calories","Total Fat","Saturated Fat","Trans Fat","Polyunsaturated Fat","Monounsaturated Fat","Cholesterol","Sodium","Potassium",
-    "Total Carbohydrates","Dietary Fiber","Soluble Fiber","Dietary Sugars","Total Sugars","Added Sugars","Erythritol","Protein"]
-
-    # Base Numbers for keeping track of total amount consumed of each nutrition fact
-    all_food_content_amount = [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
+    # Data Structures
+    
+    # All Nutrition Fact Labels and amount eaten today
+    all_food_content = dict()
 
     # Units for all Nutrition Facts
-    all_food_content_units = ["calories", "grams", "grams", "grams", "grams", "grams", "milligrams", "milligrams",
-    "milligrams", "grams", "grams", "grams", "grams", "grams", "grams", "grams", "grams"]
-
-#==================================================================================================================================
-    # Variables for Storing Info
-
-    ''' Dictionaries for storing Nutrition Facts
-
-    Note:
-    The nutirition facts are all based on the ones specified in the list all_food_content.
-    Any missing values will be treated as 0 as shown in the info.txt file
-
-    Dictionary food_info_amount
-    Keeps track of the name of the food as the key
-    Stores the amount for each Nutrition Fact in a list
-    dict(string, list[double])
-
-    Dictionary food_serving_size
-    Keeps track of the name of the food as the key
-    Stores the serving size of the food
-    '''
-    food_info_amount = defaultdict(list)
-    food_serving_size = defaultdict(list)
-
-    ''' Dictionary for food amount consumed from user input file
-
-    Keeps track of the food and the serving size of each food consumed
-    '''
-    food_info_input = defaultdict(list)
-
-
-    ''' Dictionary for total amount consumed
-
-    Keeps track of the name of the food as the key
-    Stores the total amount of units consumed for each Nutrition Fact    
-    '''
-    food_info_calculated = defaultdict(list)
-
+    all_food_content_units = dict()
+    
+    # food info dictionary containing each individual food dictionary that has all info related to each food
+    all_food_data = dict()
+    
 #==================================================================================================================================
     # Functions
-
-    ''' Function for getting info from info.txt -> get_info()
-
-    REQUIRES: info.txt has food info and values for all nutrition labels
-    MODIFIES: NA
-    EFFECTS: fills in dictionaries food_info_amount and food_serving_size
-    '''
-    def get_info(self):
-        file = open('info.txt', 'r')
-        count = 0
-        list_temp = []
-        cur_food = ""
-
-        for line in file:
-            if line == "\n" or line == "END":
-                count = 0
-                self.food_info_amount[cur_food] = [x for x in list_temp]
-                list_temp.clear()
-                continue
-
-            words = line.split()
-            if count == 0:
-                cur_food = words[0]
-                self.food_serving_size[cur_food] = float(words[1])
-            else:
-                list_temp.append(float(words[1]))
-            count += 1
-
+    
+    # fill all_food_content, all_food_content_amount, and all_food_content_units with nutrition facts related info
+    def fill_lists(self):
+        # open nutrition_facts_units json and fill following lists:
+        # all_food_content[], all_food_content_amount[], and all_food_content_units[]
+        file = open("nutrition_facts_units.json", 'r')
+        
+        # loop through dictionary
+        for label, units in file:
+            # add label to all_food_content list
+            self.all_food_content[label] = 0
+            
+            # add units to all_food_content_units
+            self.all_food_content_units[label] = units
+        
+        # close file
         file.close()
+        
+    # fill dictionary all_food_data from food in folder to_input/food
+    def fill_dicts(self):
+        # open directory where all foods are stored
+        os.chdir("something on main desktop")
+        
+        # loop through all food files in directory
+        for filename in os.listdir():
+            # open file
+            file = open(filename, 'r')
+            
+            # read json file
+            food_dict = json.load(filename)
+            
+            # get serving size from food_dict
+            serving_size = food_dict["Serving Size"]
+            
+            # loop through "Food Data" dictionary in food dictionary and adjust nutrition facts by dividing everything by serving size
+            # then set serving size to 1
+            # (this helps with making total nutrition facts calculations easier)
+            for stuff in food_dict["Food Data"]:
+                # adjust nutrition fact by dividing by serving size
+                food_dict["Food Data"][stuff] = food_dict["Food Data"][stuff] / serving_size
+                
+            # set serving size to 1 in food_dict after adjustments to nutrtion facts in "Food Data" dictionary
+            food_dict["Serving Size"] = 1
+            
+            # add "Food Data" dictionary to all_food_data dictionary
+            # key = food name, value = food data dictionary
+            self.all_food_data[food_dict["Name"]] = food_dict["Food Data"]
+            
+            # close file
+            file.close() 
 
-#======================================================================== End of function get_info()
+    # loop through food eaten today json file and calculate total nutrition facts eaten today
+    def calculate_nutrition_facts(self):
+        # open food_today.json
+        file = open("food_today.json", 'r')
+          
+        # loop through dictionary and calculate nutrition facts and update all_food_content dictionary
+        for food in file:
+            # calculate current nutrition fact amout and update all_food_content dictionary
+            food = 0
+            
 
-    ''' Function for checking serving size -> check_serving_size()
 
-    REQUIRES: food_info_amount and food_serving_size are filled in with info
-    MODIFIES: food_serving_size
-    EFFECTS: changes numbers for each nutrition fact for each food by dividing
-    the values by the serving size, and then dividing the serving size by itself
-    to get 1
-    '''
-    def check_serving_size(self):
-        for food, serving_size in self.food_serving_size.items():
-            if(serving_size != 1):
-                # divide amount by serving size so serving size is equal to 1 for easier calculations
-                self.food_info_amount[food] = [(num/serving_size) for num in self.food_info_amount[food]]
-
-                # divide serving size by itself to set it to 1
-                self.food_serving_size[food] = self.food_serving_size[food]/self.food_serving_size[food]
-
-#======================================================================== End of function check_serving_size()
 
     ''' Function for getting info on total food eaten by user -> input_info_manual()
 
@@ -154,7 +135,7 @@ class CalorieCounter:
 # End of Calorie Counter Class
 #==================================================================================================================================
 
-# Main Function for calculating info
+# Driver
 stuff = CalorieCounter()
 stuff.get_info()
 stuff.check_serving_size()
