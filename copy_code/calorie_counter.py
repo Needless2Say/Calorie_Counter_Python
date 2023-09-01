@@ -112,9 +112,12 @@ class CalorieCounter:
         file = open('input.txt', 'r')
         for line in file:
             if line == "END":
-                continue
+                break
 
+            # split line into food name and serving size eaten
             info = line.split()
+
+            # store name of food as key and serving size as value associated with key
             self.food_info_input[info[0]] = float(info[1])
 
 #======================================================================== End of function input_info_manual()

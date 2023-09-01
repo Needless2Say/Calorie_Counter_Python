@@ -1,0 +1,19 @@
+{
+    "Calories": "calories",
+    "Total Fat": "grams",
+    "Saturated Fat": "grams",
+    "Trans Fat": "grams",
+    "Polyunsaturated Fat": "grams",
+    "Monounsaturated Fat": "grams",
+    "Cholesterol": "milligrams",
+    "Sodium": "milligrams",
+    "Potassium": "milligrams",
+    "Total Carbohydrates": "grams",
+    "Dietary Fiber": "grams",
+    "Soluble Fiber": "grams",
+    "Dietary Sugars": "grams",
+    "Total Sugars": "grams",
+    "Added Sugars": "grams",
+    "Erythritol": "grams",
+    "Protein": "grams"
+}
