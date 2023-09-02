@@ -1,0 +1,24 @@
+{
+    "Name": "Carrots",
+    "Serving Size": 128,
+    "Units": "grams",
+    "Food Data": {
+        "Calories": 52,
+        "Total Fat": 0.3,
+        "Saturated Fat": 0.1,
+        "Trans Fat": 0,
+        "Polyunsaturated Fat": 0.2,
+        "Monounsaturated Fat": 0,
+        "Cholesterol": 0,
+        "Sodium": 88,
+        "Potassium": 410,
+        "Total Carbohydrates": 12,
+        "Dietary Fiber": 3.6,
+        "Soluble Fiber": 0,
+        "Dietary Sugars": 0,
+        "Total Sugars": 6.1,
+        "Added Sugars": 0,
+        "Erythritol": 0,
+        "Protein": 1.2
+    }
+}

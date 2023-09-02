@@ -1,7 +1,6 @@
 {
     "Oatmeal": 1,
     "Blue Berries": 0.4,
-    "Chocolate Granola": 0,
     "Reduced Milk": 0,
     "Whole Milk": 0.9,
     "Gram Cracker": 3,
@@ -18,16 +17,10 @@
     "White Peach": 378,
     "Banana": 0,
     "Honey Crisp": 0,
-    "Yellow Nectarine": 0,
     "Tomatoes": 0,
-    "Anjou Pear": 0,
     "Carrots": 0,
-    "RXBar Peanut": 0,
-    "RXBar Chocolate": 1,
-    "RXBar Chocolate Chip": 0,
-    "RXBar Coconut": 0,
-    "Godiva Dark Chocolate": 0,
-    "Godiva Milk Chocolate": 0,
-    "Kinder Bar Long": 2,
+    "RxBar Peanut": 0,
+    "RxBar Sea Salt Chocolate": 1,
+    "Long Kinder Bar": 2,
     "Milka Alpine Chocolate": 19
 }

@@ -1,0 +1,24 @@
+{
+    "Name": "Tomatoes",
+    "Serving Size": 123,
+    "Units": "grams",
+    "Food Data": {
+        "Calories": 22,
+        "Total Fat": 0.3,
+        "Saturated Fat": 0,
+        "Trans Fat": 0,
+        "Polyunsaturated Fat": 0.1,
+        "Monounsaturated Fat": 0,
+        "Cholesterol": 0,
+        "Sodium": 6.2,
+        "Potassium": 291.5,
+        "Total Carbohydrates": 4.8,
+        "Dietary Fiber": 1.5,
+        "Soluble Fiber": 0,
+        "Dietary Sugars": 0,
+        "Total Sugars": 3.2,
+        "Added Sugars": 0,
+        "Erythritol": 0,
+        "Protein": 1.1
+    }
+}

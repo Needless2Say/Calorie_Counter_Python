@@ -1,0 +1,24 @@
+{
+    "Name": "Egg",
+    "Serving Size": 1,
+    "Units": "Egg",
+    "Food Data": {
+        "Calories": 60,
+        "Total Fat": 4.8,
+        "Saturated Fat": 1.6,
+        "Trans Fat": 0,
+        "Polyunsaturated Fat": 1,
+        "Monounsaturated Fat": 1.8,
+        "Cholesterol": 186,
+        "Sodium": 71,
+        "Potassium": 69,
+        "Total Carbohydrates": 0.4,
+        "Dietary Fiber": 0,
+        "Soluble Fiber": 0,
+        "Dietary Sugars": 0,
+        "Total Sugars": 0.2,
+        "Added Sugars": 0,
+        "Erythritol": 0,
+        "Protein": 6.3
+    }
+}

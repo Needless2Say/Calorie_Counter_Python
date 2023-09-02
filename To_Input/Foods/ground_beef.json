@@ -1,0 +1,24 @@
+{
+    "Name": "Ground Beef",
+    "Serving Size": 112,
+    "Units": "grams",
+    "Food Data": {
+        "Calories": 240,
+        "Total Fat": 17,
+        "Saturated Fat": 6,
+        "Trans Fat": 1,
+        "Polyunsaturated Fat": 0,
+        "Monounsaturated Fat": 0,
+        "Cholesterol": 75,
+        "Sodium": 75,
+        "Potassium": 0,
+        "Total Carbohydrates": 0,
+        "Dietary Fiber": 0,
+        "Soluble Fiber": 0,
+        "Dietary Sugars": 0,
+        "Total Sugars": 0,
+        "Added Sugars": 0,
+        "Erythritol": 0,
+        "Protein": 21
+    }
+}
