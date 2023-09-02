@@ -55,23 +55,9 @@ class CalorieCounter:
 
             # close file
             file.close()
-            
-            # get serving size from food_dict
-            serving_size = food_dict["Serving Size"]
-            
-            # loop through "Food Data" dictionary in food dictionary and adjust nutrition facts by dividing everything by serving size
-            # then set serving size to 1
-            # (this helps with making total nutrition facts calculations easier)
-            for nutrition_fact_name, nutrition_fact_amount in food_dict["Food Data"].items():
-                # adjust nutrition fact by dividing by serving size
-                food_dict["Food Data"][nutrition_fact_name] = nutrition_fact_amount / serving_size
-                
-            # set serving size to 1 in food_dict after adjustments to nutrtion facts in "Food Data" dictionary
-            food_dict["Serving Size"] = 1
-            
-            # add "Food Data" dictionary to all_food_data dictionary
-            # key = food name, value = food data dictionary
-            self.all_food_data[food_dict["Name"]] = food_dict["Food Data"]
+
+            # add food_dict to all_food_data dict
+            self.all_food_data[food_dict["Name"]] = food_dict
         
         # change directory back to home
         os.chdir("D:\Microsoft_VS_Code_Programs\Python\calorie_counter")
@@ -86,13 +72,16 @@ class CalorieCounter:
 
         # close file
         file.close()
-          
-        # loop through dictionary and calculate nutrition facts and update all_food_content dictionary
+        
+        # loop through food_json input dict
         for food_name, food_amount in food_json.items():
-            # loop through food nutrition facts in food_name dictionary
-            for nutrition_fact_name, nutrition_fact_amount in self.all_food_data[food_name].items():
-                # multipy food_amount to nutrition_fact_amount and add it to all_food_content at nutrition_fact_name
-                self.all_food_content[nutrition_fact_name] += nutrition_fact_amount * food_amount
+            # get serving size from all_food_data dict
+            serving_size = self.all_food_data[food_name]["Serving Size"]
+
+            # loop through "Food Data" dict in all_food_data dict at food_name
+            for nutrit_fact_name, nutrit_fact_amount in self.all_food_data[food_name]["Food Data"].items():
+                # update all_food_content dict at specified nutrition fact
+                self.all_food_content[nutrit_fact_name] += (food_amount / serving_size) * nutrit_fact_amount
 
     # print info to console on total Nutrition Facts
     def print_data(self):
