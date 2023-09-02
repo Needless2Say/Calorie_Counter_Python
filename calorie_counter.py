@@ -76,59 +76,18 @@ class CalorieCounter:
         file = open("food_today.json", 'r')
           
         # loop through dictionary and calculate nutrition facts and update all_food_content dictionary
-        for food in file:
-            # calculate current nutrition fact amout and update all_food_content dictionary
-            food = 0
-            
-
-
-
-    ''' Function for getting info on total food eaten by user -> input_info_manual()
-
-    REQUIRES: input.txt has info in proper format
-    MODIFIES: food_info_input
-    EFFECTS: stores the food name and serving size specified in file
-    '''
-    def input_info_manual(self):
-        file = open('input.txt', 'r')
-        for line in file:
-            if line == "END":
-                break
-
-            # split line into food name and serving size eaten
-            info = line.split()
-
-            # store name of food as key and serving size as value associated with key
-            self.food_info_input[info[0]] = float(info[1])
-
-#======================================================================== End of function input_info_manual()
-
-    ''' Function for calculating total amount consumed -> calculate_total_food_content()
-
-    REQUIRES: food_info_amount, food_serving_size, and food_info_input contain proper info
-    MODIFIES: food_info_calculated
-    EFFECTS: calculates total amount of each nutrition lablel consumed and
-    stores it in food_info_calculated dictionary
-    '''
-    def food_info_calculated(self):
-        for food, serving_size in self.food_info_input.items():
-            food_info = self.food_info_amount[food]
-            for uni_index in range(len(self.all_food_content_amount)):
-                self.all_food_content_amount[uni_index] += food_info[uni_index]*serving_size
+        for food_name, food_amount in file:
+            # loop through food nutrition facts in food_name dictionary
+            for nutrition_fact_name, nutrition_fact_amount in self.all_food_data[food_name]:
+                # multipy food_amount to nutrition_fact_amount and add it to all_food_content at nutrition_fact_name
+                self.all_food_content[nutrition_fact_name] += nutrition_fact_amount * food_amount
+        
+        # close file
+        file.close()
 
 #======================================================================== End of function food_info_calculated()
 
-    ''' Function for storing total info in a file -> input_info_textfile()
-    
-    REQUIRES: food_info_calculated contains info stored properly
-    MODIFIES: NA
-    EFFECTS: writes all nutrition facts in proper format to a text file
-    '''
-    def input_info_textfile(self):
-        file = open("Nutrition_For_Today.txt", 'w')
-        for uni_index in range(17):
-            file.write("{}: {} {}\n".format(self.all_food_content[uni_index],round(self.all_food_content_amount[uni_index],2),self.all_food_content_units[uni_index]))
-        file.close()
+
 
 #======================================================================== End of function input_info_textfile()
 
