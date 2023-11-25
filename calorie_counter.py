@@ -43,7 +43,7 @@ class CalorieCounter:
     # fill dictionary all_food_data from food in folder to_input/food
     def fill_dicts(self):
         # open directory where all foods are stored
-        os.chdir("D:\Microsoft_VS_Code_Programs\Python\calorie_counter\To_Input\Foods")
+        os.chdir("To_Input\Foods")
         
         # loop through all food files in directory
         for filename in os.listdir():
@@ -60,7 +60,7 @@ class CalorieCounter:
             self.all_food_data[food_dict["Name"]] = food_dict
         
         # change directory back to home
-        os.chdir("D:\Microsoft_VS_Code_Programs\Python\calorie_counter")
+        os.chdir("..\..")
 
     # loop through food eaten today json file and calculate total nutrition facts eaten today
     def calculate_nutrition_facts(self):
