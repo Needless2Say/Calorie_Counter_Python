@@ -1,0 +1,24 @@
+{
+    "Name": "Chicken Breast",
+    "Serving Size": 120,
+    "Units": "grams",
+    "Food Data": {
+        "Calories": 198,
+        "Total Fat": 4.3,
+        "Saturated Fat": 1.2,
+        "Trans Fat": 0,
+        "Polyunsaturated Fat": 0.9,
+        "Monounsaturated Fat": 1.5,
+        "Cholesterol": 102,
+        "Sodium": 89,
+        "Potassium": 307.2,
+        "Total Carbohydrates": 0,
+        "Dietary Fiber": 0,
+        "Soluble Fiber": 0,
+        "Dietary Sugars": 0,
+        "Total Sugars": 0,
+        "Added Sugars": 0,
+        "Erythritol": 0,
+        "Protein": 37
+    }
+}

@@ -1,0 +1,24 @@
+{
+    "Name": "Greek Yogurt",
+    "Serving Size": 170,
+    "Units": "grams",
+    "Food Data": {
+        "Calories": 100,
+        "Total Fat": 0.7,
+        "Saturated Fat": 0.2,
+        "Trans Fat": 0,
+        "Polyunsaturated Fat": 0,
+        "Monounsaturated Fat": 0.1,
+        "Cholesterol": 8.5,
+        "Sodium": 61,
+        "Potassium": 239.7,
+        "Total Carbohydrates": 6.1,
+        "Dietary Fiber": 0,
+        "Soluble Fiber": 0,
+        "Dietary Sugars": 0,
+        "Total Sugars": 5.5,
+        "Added Sugars": 0,
+        "Erythritol": 0,
+        "Protein": 17
+    }
+}
