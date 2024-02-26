@@ -1,18 +1,18 @@
 Total Nutrition Facts Consumed Today
-Calories: 2060.56 calories
-Total Fat: 74.32 grams
-Saturated Fat: 26.09 grams
-Trans Fat: 1.79 grams
-Polyunsaturated Fat: 5.5 grams
-Monounsaturated Fat: 6.62 grams
-Cholesterol: 176.45 milligrams
-Sodium: 604.3 milligrams
-Potassium: 1555.84 milligrams
-Total Carbohydrates: 211.35 grams
-Dietary Fiber: 21.97 grams
-Soluble Fiber: 5.2 grams
+Calories: 2157.55 calories
+Total Fat: 76.76 grams
+Saturated Fat: 27.73 grams
+Trans Fat: 1.84 grams
+Polyunsaturated Fat: 6.48 grams
+Monounsaturated Fat: 7.54 grams
+Cholesterol: 172.4 milligrams
+Sodium: 517.04 milligrams
+Potassium: 1940.11 milligrams
+Total Carbohydrates: 237.43 grams
+Dietary Fiber: 31.67 grams
+Soluble Fiber: 8.0 grams
 Dietary Sugars: 0.0 grams
-Total Sugars: 89.64 grams
-Added Sugars: 27.0 grams
-Erythritol: 6.0 grams
-Protein: 145.92 grams
+Total Sugars: 77.66 grams
+Added Sugars: 23.2 grams
+Erythritol: 0.0 grams
+Protein: 146.51 grams
