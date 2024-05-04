@@ -1,7 +1,7 @@
 {
     "Name": "Gram Cracker",
     "Serving Size": 2,
-    "Units": "cracker",
+    "Units": "amount",
     "Food Data": {
         "Calories": 130,
         "Total Fat": 2,

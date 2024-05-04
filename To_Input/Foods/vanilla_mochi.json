@@ -1,7 +1,7 @@
 {
     "Name": "Vanilla Mochi",
     "Serving Size": 1,
-    "Units": "mochi",
+    "Units": "amount",
     "Food Data": {
         "Calories": 90,
         "Total Fat": 2.5,

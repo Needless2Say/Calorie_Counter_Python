@@ -1,7 +1,7 @@
 {
     "Name": "Egg",
     "Serving Size": 1,
-    "Units": "Egg",
+    "Units": "amount",
     "Food Data": {
         "Calories": 60,
         "Total Fat": 4.8,

@@ -1,7 +1,7 @@
 {
     "Name": "Long Kinder Bar",
     "Serving Size": 1,
-    "Units": "bar",
+    "Units": "amount",
     "Food Data": {
         "Calories": 120,
         "Total Fat": 8,

@@ -1,7 +1,7 @@
 {
     "Name": "Animal Crackers",
     "Serving Size": 11,
-    "Units": "cracker",
+    "Units": "amount",
     "Food Data": {
         "Calories": 120,
         "Total Fat": 3,
