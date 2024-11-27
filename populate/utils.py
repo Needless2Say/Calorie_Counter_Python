@@ -7,8 +7,8 @@ def getConnection():
     """Get Connection Cursor To Postgress Database."""
     db_name = "verceldb"
     db_user = "default"
-    db_pass = "bsf5qumCo6OQ"
-    db_host = "ep-autumn-night-a4d74qm2-pooler.us-east-1.aws.neon.tech"
+    db_pass = "amkCt3VWTDb8"
+    db_host = "ep-sparkling-art-a4cs75x5-pooler.us-east-1.aws.neon.tech"
     db_port = "5432"
 
     conn = psycopg2.connect(
