@@ -17,7 +17,7 @@ class CalorieCounter:
 
     # food info dictionary containing each individual food dictionary that has all info related to each food
     all_food_data = dict()
-
+ 
 #==================================================================================================================================
     # Functions
 
