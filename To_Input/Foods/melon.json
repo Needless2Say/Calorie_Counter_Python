@@ -1,0 +1,24 @@
+{
+    "Name": "Melon",
+    "Serving Size": 177,
+    "Units": "grams",
+    "Food Data": {
+        "Calories": 60,
+        "Total Fat": 0.3,
+        "Saturated Fat": 0.1,
+        "Trans Fat": 0,
+        "Polyunsaturated Fat": 0.1,
+        "Monounsaturated Fat": 0,
+        "Cholesterol": 0,
+        "Sodium": 28,
+        "Potassium": 472.6,
+        "Total Carbohydrates": 14,
+        "Dietary Fiber": 1.6,
+        "Soluble Fiber": 0,
+        "Dietary Sugars": 0,
+        "Total Sugars": 14,
+        "Added Sugars": 0,
+        "Erythritol": 0,
+        "Protein": 1.5
+    }
+}
