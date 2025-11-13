@@ -11,7 +11,7 @@ class CalorieCounter:
  
     # All Nutrition Fact Labels and amount eaten today
     all_food_content = dict()
-
+ 
     # Units for all Nutrition Facts
     all_food_content_units = dict()
 
